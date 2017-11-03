@@ -3,7 +3,7 @@ Simple basic javascript TODO app
 
 Screenshot:
 
-![Simple TODO app](https://pasteboard.co/GRTHdcv.png)
+![Simple TODO app](/relative/path/to/img.jpg)
 
 Features:
 
@@ -13,4 +13,4 @@ Features:
 * Should be able to complete the Item
 * List the completed Items
 
-Don't worry to much about the aesthetics, should be legible that's it!
+Don't worry too much about the aesthetics, should be legible that's it!
