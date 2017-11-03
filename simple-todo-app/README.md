@@ -3,7 +3,7 @@ Simple basic javascript TODO app
 
 Screenshot:
 
-![Simple TODO app](/relative/path/to/img.jpg)
+![Simple TODO app](/images/todo-js-basic.jpg?raw=true)
 
 Features:
 
