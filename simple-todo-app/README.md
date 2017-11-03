@@ -3,7 +3,7 @@ Simple basic javascript TODO app
 
 Screenshot:
 
-![Simple TODO app](/javascript-assignments/simple-todo-app/images/todo-js-basic.png?raw=true)
+![Simple TODO app](javascript-assignments/simple-todo-app/images/todo-js-basic.png?raw=true)
 
 Features:
 
