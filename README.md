@@ -1,2 +1,2 @@
-# javascript-assignments
-Javascript Assignments
+# Javascript Assignments
+Some basic javascript assignments
