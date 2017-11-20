@@ -2,9 +2,8 @@
 A simple GoodReads javascript client web app
 
 ## Features
-* Sign-in with GoodReads
+* Should be able to search the books with name
 * Interface to list the books with pagination
-* Should be able to search the songs with name
 
 ## Bonus
 * Unit test with any framework
