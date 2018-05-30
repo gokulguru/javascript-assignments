@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 
+
+    <title>Good Read</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="GoodRead.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  
+
+
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+   <div class='panel panel-primary'>
+    <div class='panel-heading'>
+      Good Read
+    </div>
+    <div class='panel-body'>
+
+     
+	  
+        <!-- Add the item -->
+		     <div class='row'>
+
+            <div class='col-4'>
+                <input type='text' data-bind="value: searchTitle" />
+				<button type="button"  data-bind="click: search" class="btn btn-primary">Search</button>
+            </div>
+			  <div class='col-2'> </div>
+			<div class="col-4">
+			
+			</div>
+        </div>
+       
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>
+                          imageUrl
+                        </th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Rating</th>
+                       
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: books">
+                    <tr >
+                        <td>
+                            <img data-bind="attr:{src: small_image_url}" >
+                        </td>
+                        <td data-bind="text: title">
+						</td>
+						                        <td data-bind="text: author">
+						</td>
+						  <td data-bind="text: Rating">
+						</td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+			<nav aria-label="Page navigation example">
+			<div class="pagination justify-content-end">
+  <ul class="pagination"  >
+    <li class="page-item ">
+      <a class="page-link" href="#" tabindex="-1" data-bind="click: searchByNextOrBack(false)">Previous</a>
+    </li>
+	</ul>
+	<ul class="pagination"  data-bind='foreach: pages'>
+    <li  data-bind="attr: { 'class' : classActive }"><a class="page-link" data-bind="text: pageNumber,click: $parent.searchWithPage" href="#"></a></li>
+   
+	</ul>
+	<ul class="pagination"  >
+    <li class="page-item">
+      <a class="page-link" href="#"  data-bind="click: searchByNextOrBack(true)">Next</a>
+    </li>
+  </ul>
+  </div>
+</nav>
+        </div>
+
+
+ </div>
+</div>
+   
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+		<script src="../Jquery/jquery-3.3.1.min.js"></script>
+	<script src="../knockout/knockout.js"></script>
+
+		<script src="GoodRead.js"></script>
+  </body>
+</html>
