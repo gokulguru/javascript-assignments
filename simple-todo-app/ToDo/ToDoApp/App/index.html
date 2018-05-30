@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 
+
+    <title>ToDo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="ToDo.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">ToDo</a>
+  
+
+    
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+   
+
+      <div class="container">
+	  
+        <!-- Add the item -->
+		<div>
+			<h3 class='bottom'>Add Item</h2>
+			<div class='row' >
+			<div class="col-6">
+			<input type="text"  data-bind="value: newTaskText" class="form-control"  placeholder="Enter Action">
+			</div>
+			<div class ="col-2">
+			</div>
+			<div class="col-4">
+			<button type="button"  data-bind="click: addTask" class="btn btn-secondary">Add</button>
+			</div>
+			</div>
+		</div>
+		<div >
+		<h3 class='bottom' >To Do</h2>
+			<div data-bind="foreach: tasks, visible: tasks().length > 0 ">
+				<div class="container" data-bind="if: !isDone()">
+				
+				<div class='row' >
+				
+				<div class="col-2">
+				<input type="checkbox" data-bind="checked: isDone" />
+				</div>
+				
+				<div class ="col-4">
+				<input data-bind="value: title, visible:isEdit()"    class="form-control" />
+				<div data-bind="text: title, visible:!isEdit()"></div>
+				</div>
+				
+				<div class="col-2">
+				<button type="button"   data-bind="click: $parent.editTask, visible:!isEdit() "class="btn btn-secondary">Edit</button>
+				<button type="button"   data-bind="click: $parent.saveTask, visible:isEdit() "class="btn btn-secondary">Save</button>
+				</div>
+				
+				<div class="col-2">
+				<button type="button"   data-bind="click: $parent.removeTask"class="btn btn-secondary">Delete</button>
+				</div>
+
+				</div>
+				
+				</div>
+			</div>
+		</div>
+		<div >
+			<h3 class='bottom'>Completed</h2>
+			<div data-bind="foreach: tasks, visible: tasks().length > 0 ">
+				<div class="container" data-bind="if: isDone()">
+				<div class='row' >
+				
+				<div class="col-2">
+				<input type="checkbox" data-bind="checked: isDone" />
+				</div>
+				
+				<div class ="col-4">
+				<input data-bind="value: title, visible:isEdit()"    class="form-control" />
+				<div data-bind="text: title, visible:!isEdit()" style= "text-decoration: line-through;"></div>
+				</div>
+				
+				<div class="col-2">
+				<button type="button"   data-bind="click: $parent.editTask, visible:!isEdit() "class="btn btn-secondary">Edit</button>
+				<button type="button"   data-bind="click: $parent.saveTask, visible:isEdit() "class="btn btn-secondary">Save</button>
+				</div>
+				
+				<div class="col-2">
+				<button type="button"   data-bind="click: $parent.removeTask"class="btn btn-secondary">Delete</button>
+				</div>
+
+				</div>
+				</div>
+			</div>
+		</div>
+        
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script src="../knockout/knockout.js"></script>
+		<script src="ToDo.js"></script>
+  </body>
+</html>
